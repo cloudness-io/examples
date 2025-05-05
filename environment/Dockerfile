@@ -1,4 +1,5 @@
-FROM golang:1.24.2
+ARG GO_VERSION="1.23.0"
+FROM golang:${GO_VERSION}
 
 # Set destination for COPY
 WORKDIR /
