@@ -3,6 +3,9 @@ FROM golang:1.24.2
 # Set destination for COPY
 WORKDIR /
 
+# Download Go modules
+COPY go.mod ./
+RUN go mod download
 
 COPY *.go ./
 
